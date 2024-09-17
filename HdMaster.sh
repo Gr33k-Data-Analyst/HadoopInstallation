@@ -93,6 +93,20 @@ sudo -u hadoop bash -c 'cat <<EOF > $HADOOP_HOME/etc/hadoop/mapred-site.xml
     <name>mapreduce.framework.name</name>
     <value>yarn</value>
   </property>
+  <property>
+        <name>yarn.app.mapreduce.am.resource.mb</name>
+        <value>512</value>
+  </property>
+  
+  <property>
+          <name>mapreduce.map.memory.mb</name>
+          <value>256</value>
+  </property>
+  
+  <property>
+          <name>mapreduce.reduce.memory.mb</name>
+          <value>256</value>
+  </property>
 </configuration>
 EOF'
 
@@ -102,6 +116,25 @@ sudo -u hadoop bash -c 'cat <<EOF > $HADOOP_HOME/etc/hadoop/yarn-site.xml
   <property>
     <name>yarn.nodemanager.aux-services</name>
     <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+        <name>yarn.nodemanager.resource.memory-mb</name>
+        <value>1536</value>
+  </property>
+
+  <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>1536</value>
+  </property>
+
+  <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>128</value>
+  </property>
+
+  <property>
+        <name>yarn.nodemanager.vmem-check-enabled</name>
+        <value>false</value>
   </property>
 </configuration>
 EOF'
