@@ -1,0 +1,43 @@
+<configuration>
+        <property>
+                <name>dfs.namenode.name.dir</name>
+                <value>file:///home/hadoop/hadoop/hdfs/namenode</value>
+        </property>
+        <property>
+                <name>dfs.datanode.data.dir</name>
+                <value>file:///home/hadoop/hadoop/hdfs/datanode</value>
+        </property>
+        <property>
+                <name>dfs.replication</name>
+                <value>1</value>
+        </property>
+        <property>
+                <name>dfs.nfs3.enabled</name>
+                <value>true</value>
+        </property>
+
+        <property>
+                <name>dfs.nfs3.port</name>
+                <value>2049</value>
+        </property>
+        <property>
+                <name>dfs.nfs3.dump.dir</name>
+                <value>/tmp/.hdfsnfs</value>
+        </property>
+        <property>
+                <name>dfs.nfs3.rtmax</name>
+                <value>1048576</value>
+        </property>
+        <property>
+                <name>dfs.nfs3.wtmax</name>
+                <value>65536</value>
+        </property>
+        <property>
+                <name>dfs.nfs3.exports.allowed.hosts</name>
+                <value>* rw</value>
+        </property>
+        <property>
+                <name>nfs.export.point</name>
+                <value>/myhdfs</value>
+        </property>
+ </configuration>
